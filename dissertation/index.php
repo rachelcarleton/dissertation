@@ -10,6 +10,7 @@
 <h3>Login Form</h3>
     
 <?php 
+    
     include "session.php";
     if(isset($_POST['email']) && isset($_POST['password'])) {
         $email = $_POST['email'];

@@ -1,7 +1,7 @@
 <?php
 
 $db_username = 'root';
-$db_password = 'root';
+$db_password = '';
 $db_name = 'booking_system';
 $db_host = 'localhost';
 
