@@ -30,9 +30,21 @@
                     </select>
                     <input type="submit" value="Book">
                 </form>
+                
+                <h1>Check for Appointments</h1>
+                
+                <a href="booked_appointments.php">Check All Appointments</a>             
+                
+<!--
+                <form action="booked_appointments.php" method ="post" id="booked_app">
+                    <input type="date" name="date" placeholder="Check a day">
+                    <input type="sumbit" value="Check for appointments">
+                </form>
+-->
             
             </div>
         </div>
+        
 
         
         
