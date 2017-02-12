@@ -1,7 +1,7 @@
 <?php
 
 // Database Connection
-include('session.php');
+include('../include/session.php');
 
 // Form Variables
 $date = $_POST['date'];

@@ -1,9 +1,9 @@
 <?php
-    include "include/header.php";
-    include "session.php";
+    include "../include/header.php";
+    include "../include/session.php";
     session_start();
     if(!isset($_SESSION['email'])) {
-        header('location:index.php');
+        header('location:/dissertation/index.php');
     }
 ?>
 
@@ -14,7 +14,7 @@
                 
                 <h1>Hello <?php echo $_SESSION['name']; ?> </h1>
         
-                <a href="logout.php" style="font-size:18px">Logout?</a>
+                <a href="../include/logout.php" style="font-size:18px">Logout?</a>
 
                 <h1>Book an Appointment</h1>
 
@@ -31,16 +31,16 @@
                     <input type="submit" value="Book">
                 </form>
                 
-                <h1>Check for Appointments</h1>
+                <h1>Check for all Appointments</h1>
                 
-                <a href="booked_appointments.php">Check All Appointments</a>             
+                <a href="booked_appointments.php">Check All Appointments</a>   
                 
-<!--
-                <form action="booked_appointments.php" method ="post" id="booked_app">
-                    <input type="date" name="date" placeholder="Check a day">
-                    <input type="sumbit" value="Check for appointments">
+                <h1>Check for Appointments on certain dates</h1>
+                
+                <form action="booked_appointments_by_date.php" method="get" id="day-bookings">
+                    <input type="date" name="date" placeholder="Appointment Date">
+                    <input type="submit" value="Search">
                 </form>
--->
             
             </div>
         </div>
