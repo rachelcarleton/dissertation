@@ -5,6 +5,8 @@
     if(!isset($_SESSION['email'])) {
         header('location:/dissertation/index.php');
     }
+    $id = $_SESSION['id'];
+    $name = $_SESSION['name'];
 ?>
 
     <body>
@@ -12,7 +14,7 @@
         <div class="row">
             <div class="container">
                 
-                <h1>Hello <?php echo $_SESSION['name']; ?> </h1>
+                <h1>Hello <?php echo $name ?> </h1>
         
                 <a href="../include/logout.php" style="font-size:18px">Logout?</a>
 
