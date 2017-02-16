@@ -24,6 +24,7 @@
                 $emailaddress = $row['customer_email'];
                 $name = $row['customer_name'];
                 $pass = $row['customer_password'];
+                $id = $row['customerID'];
 
                 if($email==$emailaddress && $hashPass==$pass) {
 
@@ -31,6 +32,7 @@
                     $_SESSION['email']=$emailaddress;
                     $_SESSION['password']=$pass;
                     $_SESSION['name']=$name;
+                    $_SESSION['id']=$id;
 
                     ?>
 
