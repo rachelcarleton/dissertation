@@ -1,0 +1,239 @@
+/* -------------------
+- Colours -
+
+Dark Blue - #0B132B
+Navy - #1C2541
+Med Blue - #3A506B
+Sky Blue - #5BC0BE
+Pale Blue - #6FFFE9
+
+-------------------- */
+
+body {  
+    font-family: 'Roboto', sans-serif;
+}
+
+/* -------------------
+- Header -
+-------------------- */
+
+header {
+    min-height:600px;
+    background:#0B132B;
+    background-image:url('../img/headerbg.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:right;
+    color:white;
+}
+
+header h1 {
+    font-weight:700;
+    text-transform:uppercase;
+    padding-top:18%;
+}
+
+header p {
+    font-weight:300;
+    width:30%;
+    text-align:left;
+    font-size:18px;
+    padding-bottom:30px;
+}
+
+header a {
+    width:200px;
+    border:1px solid #6FFFE9;
+    padding:10px 20px;
+    font-size:20px;
+    color:white;
+    font-weight:300;
+}
+
+header a:hover {
+    background:#6FFFE9;
+    color:#0B132B;
+    transition:0.4s ease-in-out;
+    text-decoration:none;
+}
+
+/* -------------------
+- Why Choose -
+-------------------- */
+
+#why {
+    background:#efefef;
+    padding:8% 0;
+    text-align:center;
+}
+
+#why h1 {
+    text-align:center;
+    text-transform:uppercase;
+    font-weight:600;
+    width:30%;
+    margin:0 auto;
+    border-bottom:4px solid #6FFFE9;
+    padding-bottom:10px;
+    margin-bottom:8%;
+}
+
+/* -------------------
+- Features
+-------------------- */
+
+.feature {
+    padding-top:8%;
+    color:white;
+}
+
+.feature:nth-child(odd) {
+    background:#1C2541;
+}
+
+.feature:nth-child(even) {
+    background:#3A506B;
+}
+
+.feature-text h2 {
+    width:60%;
+    margin:0 auto;   
+}
+
+.feature-text p {
+    width:60%;
+    margin:0 auto;
+    padding-right:30%;
+    padding-top:20px;
+}
+
+.img-left img {
+    float:left;
+    width:100%;
+}
+
+.img-right img {
+    float:right;
+    width:100%;
+}
+
+/* -------------------
+- Footer -
+-------------------- */
+
+footer {
+    padding:8% 0;
+    background:#efefef;
+    background-image:url('../img/footerbg.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:right;
+    color:#0B132B;
+}
+
+footer h1 {
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+footer p {
+    font-weight:300;
+    width:30%;
+    text-align:left;
+    font-size:18px;
+    padding-bottom:30px;
+}
+
+footer a {
+    width:200px;
+    border:1px solid #0B132B;
+    padding:10px 20px;
+    font-size:20px;
+    color:#0B132B;
+    font-weight:300;
+}
+
+footer a:hover {
+    background:#0B132B;
+    color:#6FFFE9;
+    transition:0.4s ease-in-out;
+    text-decoration:none;
+}
+
+/* -------------------
+- Sign Up -
+-------------------- */
+
+#start {
+    padding:8% 0;
+    background:#efefef;
+    color:#0B132B;
+}
+
+#start h2 {
+    width:50%;
+}
+
+#start form {
+    width:50%;
+    padding:30px 0;
+}
+
+input {
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+}
+
+select {
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+}
+
+textarea {
+    width:100%;
+    padding:10px;
+}
+
+#submit {
+    width:30%;
+    margin-top:30px;
+    padding:10px 20px;
+    background:none;
+    border:2px solid #0B132B;
+    color:#0B132B;
+}
+
+#submit:hover {
+    background:#0B132B;
+    color:#6FFFE9;
+    transition:0.4s ease-in-out;
+}
+
+.alert {
+   padding: 20px;
+   background-color: #E63C96;
+   color: white;
+   margin-bottom: 15px;
+   position:absolute;
+   top:0;
+   width:100%;
+   text-align:center;
+   border-radius:0;
+}
+
+.closebtn {
+   margin-left: 15px;
+   color: white;
+   font-weight: bold;
+   float: right;
+   font-size: 22px;
+   line-height: 20px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.closebtn:hover {
+   color: black;
+}
