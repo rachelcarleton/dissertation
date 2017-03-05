@@ -3,7 +3,7 @@
 session_start();
 
 session_destroy();
-header('Location:/dissertation/index.php');
+header('Location:/dissertation/company/index.php');
 exit;
 
 ?>

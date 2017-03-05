@@ -16,7 +16,7 @@
             <input type="submit" value="Sign Up">
         </form>
         
-        <p>Already have an acccount? <a href="login.php">Log In</a></p>
+        <p>Already have an acccount? <a href="index.php">Log In</a></p>
         
     </body>
 </html>

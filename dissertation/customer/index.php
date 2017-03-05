@@ -1,9 +1,9 @@
 <?php include('../include/header.php'); ?>
 
-<body>
+<body id="loginPage">
 
-<div class="row">
-    <div class="container">
+<div class="container">
+    <div class="card card-container">
         
         
         <h3>Customer Login Form</h3>
@@ -26,6 +26,7 @@
                 $pass = $row['customer_password'];
                 $id = $row['customerID'];
 
+
                 if($email==$emailaddress && $hashPass==$pass) {
 
                     session_start();
@@ -33,24 +34,20 @@
                     $_SESSION['password']=$pass;
                     $_SESSION['name']=$name;
                     $_SESSION['id']=$id;
-
                     ?>
 
-                    <script>window.location.href='appointment.php';</script>
+                    <script>window.location.href='dashboard.php';</script>
                     <?php
                 }
             }
         ?>
 
-        <form method="post">
-
-            <label>Email Address:</label><br>
-            <input id="email" type="text" name="email" placeholder="email address" /><br><br>
-
-            <label>Password:</label><br>
-            <input id="password" type="password" name="password" placeholder="password" />  <br><br>
-
-            <button type="submit" name="login">Login</button> 
+        <form class="form-signin" method="post"> 
+            
+            <span id="reauth-email" class="reauth-email"></span>
+            <input id="email" type="text" name="email" placeholder="email address" />
+            <input id="password" type="password" name="password" placeholder="password" />
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" name="login">Sign in</button>
 
         </form>
         

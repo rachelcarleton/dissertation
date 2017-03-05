@@ -161,6 +161,116 @@ footer a:hover {
 }
 
 /* -------------------
+- Login -
+-------------------- */
+
+#loginPage {
+    height: 100%;
+    min-height:100%;
+    background:#efefef;
+}
+
+#loginPage .card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+    margin-top:10%;
+}
+
+#loginPage .btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+#loginPage .card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#loginPage input {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#loginPage .form-signin input[type=email],
+#loginPage .form-signin input[type=password],
+#loginPage .form-signin input[type=text],
+#loginPage .form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#loginPage .form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+#loginPage .btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+#loginPage .btn.btn-signin:hover,
+#loginPage .btn.btn-signin:active,
+#loginPage .btn.btn-signin:focus {
+    background-color: rgb(12, 97, 33);
+}
+
+#loginPage .signup-link {
+    color: rgb(104, 145, 162);
+}
+
+#loginPage .signup-link:hover,
+#loginPage .signup-link:active,
+#loginPage .signup-link:focus{
+    color: rgb(12, 97, 33);
+}
+
+/* -------------------
 - Sign Up -
 -------------------- */
 
@@ -236,4 +346,241 @@ textarea {
 
 .closebtn:hover {
    color: black;
+}
+
+/* ---------------
+- Register -
+--------------- */
+
+#signupPage {
+    height: 100%;
+    min-height:100%;
+    background:#efefef;
+}
+
+#signupPage .card-container.card {
+    max-width: 500px;
+    padding: 40px 40px;
+    margin-top:10%;
+}
+
+#signupPage .btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+#signupPage .card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#signupPage input {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#signupPage .form-signin input[type=email],
+#signupPage .form-signin input[type=password],
+#signupPage .form-signin input[type=text],
+#signupPage .form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#signupPage .form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+#signupPage .btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+#signupPage .btn.btn-signin:hover,
+#signupPage .btn.btn-signin:active,
+#signupPage .btn.btn-signin:focus {
+    background-color: rgb(12, 97, 33);
+}
+
+#signupPage .signup-link {
+    color: rgb(104, 145, 162);
+}
+
+#signupPage .signup-link:hover,
+#signupPage .signup-link:active,
+#signupPage .signup-link:focus{
+    color: rgb(12, 97, 33);
+}
+
+/* -----------------------
+- Company / Appointments -
+------------------------ */
+
+#bookAppointment {
+    width:100%;
+    padding:8% 0;
+    background:#0B132B;
+    color:white;
+}
+
+#bookAppointment h1 {
+    text-transform:uppercase;
+    padding-bottom:30px;
+    text-align:center;
+}
+
+#bookAppointment form {
+    width:40%;
+    color:black;
+    margin:0 auto;
+}
+
+#bookAppointment form input[type="submit"] {
+    width:50%;
+    border:2px solid #6FFFE9;
+    background:none;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+#bookAppointment form input[type="submit"]:hover {
+    background:#6FFFE9;
+}
+
+#allAppointments {
+    width:100%;
+    background:#efefef;
+    color:#0b132b;
+    padding:8% 0;
+    text-align:center;
+}
+
+#allAppointments h1 {
+    padding-bottom:30px;
+}
+
+#allAppointments a {
+    border:2px solid #0B132B;
+    background:none;
+    padding:10px 20px;
+    color:#0B132B;
+}
+
+#allAppointments a:hover {
+    background:#0B132B;
+    color:white;
+    text-decoration:none;
+}
+
+#checkAppointments {
+    width:100%;
+    background:#3A506B;
+    color:white;
+    padding:8% 0;
+    text-align:center;
+}
+
+#checkAppointments form {
+    width:30%;
+    color:#0b132b;
+    margin:0 auto;
+}
+
+#checkAppointments form input[type="submit"] {
+    background:#6FFFE9;
+    width:100%;
+    border:none;
+}
+
+#appointmentPage footer {
+    width:100%;
+    padding:3% 0;
+    text-align:center;
+    color:white;
+    background:#0B132B;
+}
+
+#appointmentPage footer a {
+    color:white;
+    text-decoration:none;
+}
+
+/* -----------------------
+- Customer -
+------------------------ */
+
+.customerPage header {
+    background:white;
+    background-image:none;
+    color:#0B1432B;
+    min-height:200px;
+}
+
+.customerPage header h1 {
+    color:#0B132B;
+    padding-top:5%;
+    padding-bottom:20px;
+}
+
+.customerPage header p {
+    color:#0B132B;
+    padding-bottom:5%;
+}
+
+.customerPage header p a {
+    width:200px;
+    background:#6FFFE9;
+    padding:10px 20px;
+    font-size:20px;
+    color:black;
+    font-weight:300;
+    margin-top:20px;
 }

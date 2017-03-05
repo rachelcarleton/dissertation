@@ -17,12 +17,12 @@ if ($result=mysqli_query($mysqli,$findbooking))
     if ($rowcount > 0) { 
        echo '<script type="text/javascript">
        alert("Sorry, there is no appointment available.");
-       window.location.href = "appointment.php";
+       window.location.href = "dashboard.php";
        </script>';
        exit; 
     } else {
         
-        $sql = "INSERT INTO appointment (appointment_date, appointment_time) VALUES ('$date', '$time')";
+        $sql = "INSERT INTO appointment (appointment_date, appointment_time, customerID) VALUES ('$date', '$time', '$id')";
 
         if (mysqli_query($mysqli, $sql)) {
             echo "New appointment has been created successfully" . "<br /> - Appointment at " . $time . " on " . $date; 
