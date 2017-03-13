@@ -8,6 +8,7 @@ $id = $_SESSION['id'];
 // Form Variables
 $date = $_POST['date'];
 $time = $_POST['time'];
+$service = $_POST['service'];
 
 $findbooking = "select * from appointment where appointment_date='$date' and appointment_time='$time'";
 if ($result=mysqli_query($mysqli,$findbooking))
@@ -16,29 +17,19 @@ if ($result=mysqli_query($mysqli,$findbooking))
     $rowcount=mysqli_num_rows($result);
     if ($rowcount > 0) { 
        echo '<script type="text/javascript">
-       alert("Sorry, there is no appointment available.");
-       window.location.href = "dashboard.php";
+       alert("Sorry, not appointment available.");
+       window.location.href = "index.php";
        </script>';
        exit; 
     } else {
         
-        $sql = "INSERT INTO appointment (appointment_date, appointment_time, customerID) VALUES ('$date', '$time', '$id')";
+        $sql = "INSERT INTO appointment (appointment_date, appointment_time, serviceID, customerID) VALUES ('$date', '$time', '$service', '$id')";
 
         if (mysqli_query($mysqli, $sql)) {
-            echo "New appointment has been created successfully" . "<br /> - Appointment at " . $time . " on " . $date; 
+           echo '<script>window.location.href = "index.php?success";</script>'; 
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }
-        
-        $appointmentid = mysqli_insert_id($mysqli);
-        
-        $findapt = $mysqli->query("select * from appointment where appointmentID='$appointmentid'");
-        $row = $findapt->fetch_assoc();
-
-        $aptid = $row['appointmentID'];
-        
-        $sql2 = "INSERT INTO customer_appointment (customerID, appointmentID) VALUES ('$id', '$aptid' )";
-        mysqli_query($mysqli, $sql2);
         
     }
 // Free result set

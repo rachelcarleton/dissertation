@@ -1,3 +1,5 @@
+<?php include "include/session.php"; ?>
+    
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -40,21 +42,34 @@
         $industry = $_POST['industry'];
         $other = $_POST['otherindustry'];
         $services = $_POST['services'];
+        
+        $signup = "INSERT INTO signups (company_name, address, town, postcode, telephone, email_address, company_type) VALUES('$name', '$address', '$town', '$postcode', '$telephone', '$from', '$industry')";
+        
+            if (mysqli_query($mysqli, $signup)) {
 
-        $subject = "New Booking System Sign Up";
-        $subject2 = "Thank you for signing up to BS";
+                $subject = "New Booking System Sign Up";
+                $subject2 = "Thank you for signing up to BS";
 
-        $message = "You have a new sign up. Company details as follows" . "\n\n" . $name . "\n\n" . $address . "\n\n" . $town . "\n\n" . $postcode . "\n\n" . $telephone . "\n\n" . $industry . "\n\n" . $other . "\n\n" . $services;
-        $message2 = "Hello!" . "\n\n" . "Thank you for signing up to BS. We will be in touch shortly when your system has been setup.";
+                $message = "You have a new sign up. Company details as follows" . "\n\n" . $name . "\n\n" . $address . "\n\n" . $town . "\n\n" . $postcode . "\n\n" . $telephone . "\n\n" . $industry . "\n\n" . $other . "\n\n" . $services;
+                $message2 = "Hello!" . "\n\n" . "Thank you for signing up to BS. We will be in touch shortly when your system has been setup.";
 
-        $headers = "From:" . $from;
-        $headers2 = "From:" . $to;
-        mail($to,$subject,$message,$headers);
-        mail($from,$subject2,$message2,$headers2);
-        echo "<div class='alert'>";
-        echo "<span class='closebtn'>&times;</span>";
-        echo "Thank you for your message. We will be in touch soon";
-        echo "</div>";
+                $headers = "From:" . $from;
+                $headers2 = "From:" . $to;
+                mail($to,$subject,$message,$headers);
+                mail($from,$subject2,$message2,$headers2);           
+
+                echo "<div class='alert'>";
+                echo "<span class='closebtn'>&times;</span>";
+                echo "Thank you for your message. We will be in touch soon";
+                echo "</div>";
+            } else {
+                echo '<script type="text/javascript">
+                       alert("There was a problem. Please try again.");
+                       window.location.href = "signup.php";
+                       </script>';
+            }
+
+        
         }
     ?>
     
@@ -63,7 +78,7 @@
             
             <h2>Please provide some details about your business. This way we can accurately set up your system.</h2>
             
-            <form action="" method="post">
+            <form method="post">
             
                 <input type="text" name="companyname" placeholder="Company Name">
                 <input type="text" name="address" placeholder="Address">

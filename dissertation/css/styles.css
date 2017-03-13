@@ -459,6 +459,38 @@ textarea {
 }
 
 /* -----------------------
+- Company / Dashboard -
+------------------------ */
+
+#appointmentPage header {
+    background:white;
+    background-image:none;
+    color:#0B1432B;
+    min-height:200px;
+}
+
+#appointmentPage header h1 {
+    color:#0B132B;
+    padding-top:5%;
+    padding-bottom:20px;
+}
+
+#appointmentPage header p {
+    color:#0B132B;
+    padding-bottom:5%;
+}
+
+#appointmentPage header p a {
+    width:200px;
+    background:#6FFFE9;
+    padding:10px 20px;
+    font-size:20px;
+    color:black;
+    font-weight:300;
+    margin-top:20px;
+}
+
+/* -----------------------
 - Company / Appointments -
 ------------------------ */
 
@@ -553,6 +585,15 @@ textarea {
     text-decoration:none;
 }
 
+#addCustomer {
+    width:100%;
+    background:#F2F2F2;
+    padding:3% 0;
+    text-align:center;
+}
+
+
+
 /* -----------------------
 - Customer -
 ------------------------ */
@@ -583,4 +624,19 @@ textarea {
     color:black;
     font-weight:300;
     margin-top:20px;
+}
+
+/* -----------------------
+- Customer / Cancel Appointment -
+------------------------ */
+
+.customerPage #cancelAppointment {
+    width:100%;
+    padding:8% 0;
+    background:#0B132B;
+    color:white;
+}
+
+.customerPage .cancelform {
+    color:black;
 }

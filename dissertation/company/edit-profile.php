@@ -3,7 +3,7 @@
     include "../include/session.php";
     session_start();
     if(!isset($_SESSION['email'])) {
-        header('location:/dissertation/customer/index.php');
+        header('location:/dissertation/login.php');
     }
 
     $id = $_SESSION['id'];
@@ -27,7 +27,7 @@
                     $telephone = $_POST['telephone'];
                     $emailaddress = $_POST['email'];
                     
-                    $editprofile = "UPDATE customer SET customer_name = '$name', customer_address = '$address', customer_town = '$town', customer_postcode = '$postcode', customer_telephone = '$telephone', customer_email = '$emailaddress' WHERE customerID = '$id'";
+                    $editprofile = "UPDATE company SET company_name = '$name', address = '$address', town = '$town', postcode = '$postcode', telephone = '$telephone', email = '$emailaddress' WHERE companyID = '$id'";
                     
                     if (mysqli_query($mysqli, $editprofile)) {                       
                            echo '<script type="text/javascript">
@@ -43,14 +43,37 @@
                 } ?>
                 
                 <form method="post">
-                  <input type="text" name="name" placeholder="Enter Full Name">
-                    <input type="text" name="address" placeholder="Enter Address">
-                    <input type="text" name="town" placeholder="Enter Town">
-                    <input type="text" name="postcode" placeholder="Enter Postcode">
-                    <input type="text" name="telephone" placeholder="Enter Telephone">
-                    <input type="text" name="email" placeholder="Enter Email Address">
+                    
+                    <?php
+
+                    $companyinfo = $mysqli->query("select * from company where companyID = '$id'");
+                    $row = $companyinfo->fetch_assoc();
+                    
+                    $compname = $row['company_name'];
+                    $address = $row['address'];
+                    $town = $row['town'];
+                    $postcode = $row['postcode'];
+                    $telephone = $row['telephone'];
+                    $emailaddress = $row['email'];
+                    
+                    echo "<input name=\"name\" type=\"text\" value=\"" . $compname. "\">";
+                    
+                    echo "<input name=\"address\" type=\"text\" value=\"" . $address. "\">";
+                    
+                    echo "<input name=\"town\" type=\"text\" value=\"" . $town. "\">";
+                    
+                    echo "<input name=\"postcode\" type=\"text\" value=\"" . $postcode. "\">";
+                    
+                    echo "<input name=\"telephone\" type=\"text\" value=\"" . $telephone. "\">";
+                    
+                    echo "<input name=\"email\" type=\"text\" value=\"" . $emailaddress. "\">";
+                    
+                    ?>
+                    
                     <button type="submit">Submit</button>
                 </form>
+                
+                <a href="profile.php">Back to Profile</a>
                 
             </div>
         </div>

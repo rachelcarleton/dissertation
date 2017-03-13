@@ -20,7 +20,7 @@ $hash = password_hash($password, PASSWORD_BCRYPT, $cost);
 $query = "INSERT INTO customer (customer_name, customer_address, customer_town, customer_postcode, customer_telephone, customer_email, customer_password) VALUES('$name', '$address', '$town', '$postcode', '$telephone', '$emailaddress', '$hash')";
 
 if (mysqli_query($mysqli, $query)) {
-    header("Location:index.php"); 
+    header("Location:../login.php"); 
     die();
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($mysqli);

@@ -3,7 +3,7 @@
     include "../include/session.php";
     session_start();
     if(!isset($_SESSION['email'])) {
-        header('location:/dissertation/company/index.php');
+        header('location:/dissertation/login.php');
     }
 ?>
 <body>

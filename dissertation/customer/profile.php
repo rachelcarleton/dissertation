@@ -3,7 +3,7 @@
     include "../include/session.php";
     session_start();
     if(!isset($_SESSION['email'])) {
-        header('location:/dissertation/customer/index.php');
+        header('location:/dissertation/login.php');
     }
 
     $id = $_SESSION['id'];
@@ -81,7 +81,7 @@
                     <button type="submit">Submit</button>
                 </form>
                 
-                <p><a href="dashboard.php">Back to Dashboard</a></p>
+                <p><a href="index.php">Back to Dashboard</a></p>
                 
             </div>
         </div>
