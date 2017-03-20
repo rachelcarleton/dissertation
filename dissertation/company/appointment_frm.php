@@ -15,7 +15,7 @@ if ($result=mysqli_query($mysqli,$findbooking))
     if ($rowcount > 0) { 
        echo '<script type="text/javascript">
        alert("Sorry, there is no appointment available.");
-       window.location.href = "appointment.php";
+       window.location.href = "index.php";
        </script>';
        exit; 
     } else {

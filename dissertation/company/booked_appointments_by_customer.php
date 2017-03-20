@@ -14,9 +14,9 @@
             <?php
                 
              //Variables
-            $date = $_GET['date'];
+            $customer = $_GET['customername'];
                 
-            $allbookings = "select * from appointment where appointment_date = '$date'";
+            $allbookings = "select * from appointment where customerID = '$customer'";
             $result = $mysqli->query($allbookings);
             // Return the number of rows in result set
             $rowcount=mysqli_num_rows($result);
